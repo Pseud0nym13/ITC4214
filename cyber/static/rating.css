@@ -1,0 +1,29 @@
+.starcontainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh
+  }
+  
+  .stars {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+  }
+  
+  .raiting input{
+    display: none;
+  }
+  
+  .stars i {
+    transition: all .3s;
+  }
+  
+  .stars i:hover {
+    transform: scale(1.1) rotate(5deg);
+    cursor: pointer;
+  }
+  
+  .stars :checked ~ label {
+    color: gold;
+  }
