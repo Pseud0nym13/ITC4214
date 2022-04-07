@@ -113,4 +113,18 @@ footer{
   cursor: pointer;
   font-size: 20px;
 }
+.nav-link1{
+  color:black;
+}
+.text-center{
+  color:black;
+}
+#sign-up{
+  margin-left:1%;
+}
+#sign-in{
+  color:black;
+  padding-bottom:5%;
+  margin-left:80%;
+}
  
