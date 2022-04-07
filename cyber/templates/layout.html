@@ -12,24 +12,21 @@
 <header>
     <p class="welcome-tag">Welcome to Gamer Central</p>
     <div class = flexbox-container1>
-            <ul class="nav justify-content-center border-bottom pb-3 mb-3">
-            <div class="flexbox-item header">
-                <div class="flexbox-item header-logo-image">
-                    <img src="{% static 'images/logoimg.png' %}" alt="Game Central">
-                </div>
+            <div class="flexbox-item header-logo-image">
+                <img src="{% static 'images/logoimg.png' %}" alt="Game Central">
             </div>
-            <li class="flexbox-item"><a href="#" class="nav-link px-2">Home</a></li>
-            <li class="flexbox-item"><a href="#" class="nav-link px-2">Games</a></li>
-            <li class="flexbox-item"><a href="#" class="nav-link px-2">Developers</a></li>
-            <li class="flexbox-item"><a href="#" class="nav-link px-2">Contact Us</a></li>
-            </ul>
-            <div class="flexbox-item">
-            <form action="">
-                <input type="search" required>
-                <i class="fa fa-search"></i>
-              </form>
-            </div>
+            <li class="flexbox-item home"><a href="/" class="nav-link px-2">Home</a></li>
+            <li class="flexbox-item games"><a href="#" class="nav-link px-2">Games</a></li>
+            <li class="flexbox-item developers"><a href="#" class="nav-link px-2">Developers</a></li>
+            <li class="flexbox-item contact"><a href="#" class="nav-link px-2">Contact Us</a></li>
+            <div class="flexobox-item searchBar">
+                <form>
+                  <input class ="search" type="search" placeholder = "Search..." name="search" />
+                  <button class ="searchBtn" type="submit">Search</button> 
+                </form>
+              </div>
     </div>
+    
      <!--=====================================
         FORM MODAL
        =====================================-->
@@ -85,7 +82,7 @@
     <div class="footer-container">
         <footer class="py-3 my-4">
           <ul class="nav justify-content-center border-bottom pb-3 mb-3">
-            <li class="nav-item"><a href="#" class="nav-link1 px-2 ">Home</a></li>
+            <li class="nav-item"><a href="/" class="nav-link1 px-2 ">Home</a></li>
             <li class="nav-item"><a href="#" class="nav-link1 px-2 ">FAQs</a></li>
             <li class="nav-item"><a href="#" class="nav-link1 px-2 ">About</a></li>
             <li class="nav-item"><a href="#" class="nav-link1 px-2 ">Contact Us</a></li>
@@ -94,5 +91,6 @@
         </footer>
       </div>
 </footer>
+<script src="https://kit.fontawesome.com/7f7919aac7.js" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </footer>
