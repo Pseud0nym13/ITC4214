@@ -2,6 +2,8 @@ body{
   background-color: #5B42F3;
 }
 header{
+  height:100%;
+  max-height:150px;
   background-size:contain;
   background-image: url("/static/images/backgroundheader.jpg");
 }
@@ -54,11 +56,14 @@ footer{
 }
 .carousel{
   background-image:url("/static/images/carouselbackground.webp");
-  background-size: contain;
+  background-size: 100% ;
 }
 .carousel-inner{
   max-width: 60%;
   margin:auto;
+}
+.carousel-caption{
+  margin-top:70%
 }
 .carousel-item{
     height:600px;
@@ -72,26 +77,25 @@ footer{
   }
   .flexbox-container1 {
     display: flex;
-    
-  }
+    align-items: flex-start;
+  } 
  .flexbox-item {
-    height: 100px;
+    list-style: none;
   }
-  .flexbox-item + .flexbox-item { 
+  .flexbox-item { 
     margin: 20px;
   }
 .header-logo-image {
   width: 120px;
-  margin-bottom:30px;
+  margin-bottom:80%;
 }
 .header-logo-image img {
     position:relative;
-    margin-bottom:70%;
-	  height: 125px;
-	  width: 125px;
+	  height: 120px;
+	  width: 120px;
 }
 .searchBar{
-  margin-left:40%
+  margin-left:18%
 }
 .search{
   width: 100%;

@@ -11,17 +11,22 @@
     </head>
 <header>
     <span class="welcome-tag">Welcome to Game Over</span>
-    <span id = "sign-in"><a href="/login">Sign in</a></span>
+    {% if request.user.is_authenticated %}
+    <span id = "sign-in"><a href="/logout">Log-out</a></span>
+    {% else %}
+    <span id = "sign-in"><a href="/login">Log-in</a></span>
     <span id = "sign-up"><a href="/signup">Sign up</a></span>
-
+    {% endif %}
     <div class = flexbox-container1>
             <div class="flexbox-item header-logo-image">
                 <img src="{% static 'images/logoimg.png' %}" alt="Game Central">
             </div>
-            <li class="flexbox-item home"><a href="/" class="nav-link px-2">Home</a></li>
-            <li class="flexbox-item games"><a href="#" class="nav-link px-2">Games</a></li>
-            <li class="flexbox-item developers"><a href="#" class="nav-link px-2">Developers</a></li>
-            <li class="flexbox-item contact"><a href="#" class="nav-link px-2">Contact Us</a></li>
+            <ul style="display: flex; align-items: center; justify-content: space-around;">
+                <li class="flexbox-item home"><a href="/" class="nav-link px-2">Home</a></li>
+                <li class="flexbox-item games"><a href="#" class="nav-link px-2">Games</a></li>
+                <li class="flexbox-item developers"><a href="#" class="nav-link px-2">Developers</a></li>
+                <li class="flexbox-item contact"><a href="#" class="nav-link px-2">Contact Us</a></li>
+            </ul>
             <div class="flexobox-item searchBar">
                 <form>
                   <input class ="search" type="search" placeholder = "Search..." name="search" />
