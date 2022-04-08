@@ -1,9 +1,10 @@
-from django.shortcuts import render
+from multiprocessing import AuthenticationError
+from django.shortcuts import redirect, render
 from django.contrib.auth.views import LoginView, LogoutView
 from django.views.generic.edit import CreateView
 from django.contrib.auth.forms import UserCreationForm
 def logout(request):
-    auth.logout(request)
+    AuthenticationError.logout(request)
     return redirect('/')
 
 class SignUpView(CreateView):
