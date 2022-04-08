@@ -20,4 +20,7 @@ class LoginInterfaceView(LoginView):
 def home(request):
     return render(request, 'home.html')
 
+def games(request):
+    return render(request, 'games.html')
+
 # Create your views here.
