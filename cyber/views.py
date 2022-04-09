@@ -37,6 +37,6 @@ def games(request):
     context = {
         'games': Game.objects.all()
     }
-    return render (request, '/games.html', context)
+    return render (request, 'games.html', context)
 
 # Create your views here.
