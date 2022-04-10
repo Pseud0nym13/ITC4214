@@ -5,5 +5,5 @@ class GamesAdmin(admin.ModelAdmin):
     list_display=('name',)
 
 
-admin.site.register(models.Game, GamesAdmin)
+admin.site.register(models.Games, GamesAdmin)
 # Register your models here.
