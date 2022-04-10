@@ -1,0 +1,7 @@
+{% extends 'layout.html' %}
+{% load static %}
+{% block content %}
+     {% for game in games %}
+     <li>{{game.name}}</li>
+     {% endfor %}
+{% endblock %}

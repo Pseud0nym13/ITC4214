@@ -5,11 +5,16 @@ from django.utils import timezone
 from django.contrib.auth.models import AbstractUser
 
 class User(AbstractUser):
-    pass
+    def get_absolute_url(self):
+        return "/profile/%i/" % self.id
+class Genre (models.Model):
+    name = models.CharField(max_length= 100)
+    def __str__(self):
+        return self.name
 
 class Games(models.Model):
     name = models.CharField(max_length=100)
-    genre = models.CharField(max_length=30)
+    genre = models.ForeignKey(Genre, on_delete = models.CASCADE)
     description = models.TextField()
     date_posted = models.DateTimeField(default = timezone.now, blank = True)
     release_date = models.DateTimeField()

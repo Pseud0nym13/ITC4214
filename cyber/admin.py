@@ -8,4 +8,5 @@ class GamesAdmin(admin.ModelAdmin):
 
 admin.site.register(models.User, UserAdmin)
 admin.site.register(models.Games, GamesAdmin)
+admin.site.register(models.Genre)
 # Register your models here.

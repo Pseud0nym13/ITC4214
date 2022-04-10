@@ -1,8 +1,22 @@
 {% extends 'layout.html' %}
 {% load static %}
 {% block content %}
-    <div class = flexbox-container-card>
-     {% for game in games %}
-     <li>{{game.name}}</li>
-     {% endfor %}
+<div class = "flexbox-container flexbox-wrap mt-4">
+{% for game in games %}
+<div class="card mx-4" style="width: 18rem;">
+    <img class="card-img-top" src="..." alt="Card image cap">
+    <div class="card-body">
+        <h5 class="card-title">{{game.name}}</h5>
+        <p class="card-text">
+        <ul>
+            <li>{{game.genre}}</li>
+            <li>{{game.description}}</li>
+            <li>{{game.date_posted}}</li>
+        </ul>
+        </p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+    </div>
+</div>
+{% endfor %}
+</div>
 {% endblock %}

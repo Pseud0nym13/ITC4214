@@ -21,7 +21,7 @@ urlpatterns = [
     
     path('admin/', admin.site.urls),
     path('', views.home, name='home'),
-    path('games', views.games, name='games'),
+    path('games', views.GameList.as_view(), name='games'),
     path('profile/<int:pk>/', views.Profile.as_view(), name='profile'),
     path('addgame', views.GameCreateView.as_view(),name = 'addgame'),
     path('login', views.LoginInterfaceView.as_view(),name = 'login'),
