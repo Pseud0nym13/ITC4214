@@ -1,0 +1,98 @@
+header{
+    height:150px;
+    background-size:contain;
+    background-image: url("/static/images/backgroundheader.jpg");
+}
+body{
+    height:600px;
+    background-image:url("/static/images/bodybackground.webp");
+    background-size:auto;
+    padding-bottom:100px;   /* Height of the footer */
+  }
+footer{
+   position:absolute;
+   bottom:0%;
+   width:100%;
+   height:100px;   /* Height of the footer */
+   background:transparent;
+}
+.container-fluid{
+    display: flex;
+    flex-wrap: inherit;
+}
+.btn-outline-success {
+    color: #000000;
+    border-color: rgb(255, 166, 0);
+}
+.flexbox-container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+  } 
+.flexbox-item {
+    display:flex;
+    list-style: none;
+  }
+.header-logo-imagee{
+    width: 120px;
+  }
+.header-logo-imagee img {
+    position:relative;
+    height: 120px;
+    width: 120px;
+  }
+.nav-item{
+    color: black;
+    background-image: linear-gradient(144deg,#5B42F3, #f38a00 50%);
+    border: 0;
+    border-radius: 8px;
+    box-sizing: border-box;
+    display: flex;
+    font-family: Phantomsans, sans-serif;
+    font-size: 20px;
+    justify-content: center;
+    align-content: flex-end;
+    line-height: 1em;
+    max-width: 100%;
+    min-width: 140px;
+    padding: 3px;
+    margin: 2%;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    white-space: nowrap;
+    cursor: pointer;
+}
+.header-logo-image {
+    width: 120px;
+    margin-bottom:80%;
+  }
+  .header-logo-image img {
+    position:relative;
+    height: 120px;
+    width: 120px;
+  }
+  .carousel{
+    background-image:url("/static/images/carouselbackground.webp");
+    background-position: center;
+    background-size: 100% ;
+  }
+  .carousel-inner{
+    max-width: 50%;
+    margin:auto;
+  }
+  .carousel-caption{
+    margin-top:70%
+  }
+  .carousel-item{
+    border:solid;
+    border-color:azure;
+    max-height:800px;
+    object-fit:none;
+    max-width: 100%;
+    }
+  .carousel-item-active{
+      height: 20px;
+      width: 20%;
+    }

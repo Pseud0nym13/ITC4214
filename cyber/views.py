@@ -9,7 +9,6 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 from django.views.generic.list import ListView
 from django.db.models import Q
 
-
 def profile(request):
     return
 class Profile(LoginRequiredMixin, UpdateView):
@@ -21,7 +20,7 @@ class Profile(LoginRequiredMixin, UpdateView):
 class GameCreateView(LoginRequiredMixin, CreateView):
     login_url = 'login'
     model = Games
-    fields = ['name','genre','description','release_date']
+    fields = ['name','genre','description','release_date', 'image']
     template_name = 'addgame.html'
     success_url = 'games'
 class CustomUserCreationForm(UserCreationForm):

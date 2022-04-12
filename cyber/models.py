@@ -18,7 +18,7 @@ class Games(models.Model):
     description = models.TextField()
     date_posted = models.DateTimeField(default = timezone.now, blank = True)
     release_date = models.DateTimeField()
-    # image = models.FileField(upload_to=filepath,)
+    image = models.ImageField(upload_to='users/%Y/%m/%d/', blank=True)
     def __str__(self):
         return self.name
 class Developer (models.Model):

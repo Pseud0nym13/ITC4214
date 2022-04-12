@@ -88,6 +88,7 @@ footer{
   } 
 .flexbox-container1 {
     display: flex;
+    justify-content: space-between;
     align-items: flex-start;
   } 
  .flexbox-item {
@@ -105,7 +106,6 @@ footer{
   margin-bottom:80%;
 }
 .header-logo-image img {
-  border:solid;
   position:relative;
   height: 120px;
   width: 120px;
@@ -132,6 +132,10 @@ footer{
   border-radius: 5px 5px 5px 5px;
   cursor: pointer;
   font-size: 20px;
+}
+.nav-item{
+  display:flex;
+  color:black;
 }
 .nav-link1{
   color:black;
