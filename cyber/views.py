@@ -9,24 +9,28 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 from django.views.generic.list import ListView
 from django.db.models import Q
 from django.contrib.auth.decorators import login_required
-@login_required(login_url='login')
-def update(request, sys_gen_user):
-    # here I am getting the user name of current logged in user.
-    if request.user.is_authenticated:
-        username = request.user.username
+from django.contrib.auth.mixins import UserPassesTestMixin
+# @login_required(login_url='login')
+# def update(request, sys_gen_user):
+#     # here I am getting the user name of current logged in user.
+#     if request.user.is_authenticated:
+#         username = request.user.username
 
-    if username == sys_gen_user:
-        user_id = User.objects.get(sys_gen_user=sys_gen_user)
-        if request.method == 'GET':
-            form = CustomUserCreationForm(instance=user_id)
-            return render(request, 'update.html', {'form': form})
-        else:
-            form = CustomUserCreationForm(request.POST, instance=user_id)
-            if form.is_valid():
-                form.save()
+#     if username == sys_gen_user:
+#         user_id = User.objects.get(sys_gen_user=sys_gen_user)
+#         if request.method == 'GET':
+#             form = CustomUserCreationForm(instance=user_id)
+#             return render(request, 'update.html', {'form': form})
+#         else:
+#             form = CustomUserCreationForm(request.POST, instance=user_id)
+#             if form.is_valid():
+#                 form.save()
+
 def profile(request):
     return
-class Profile(LoginRequiredMixin, UpdateView):
+class Profile(LoginRequiredMixin,UserPassesTestMixin, UpdateView ):
+    def test_func(self):
+        return self.request.user.id == self.kwargs['pk']
     login_url = 'login'
     model = User
     fields = ['first_name','last_name', 'email']
