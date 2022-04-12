@@ -1,1 +1,1 @@
-web: gunicorn --chdir ITC4214 cyber.wsgi:application --log-file - --log-level debug
+web: gunicorn  cyber.wsgi:application --log-file - --log-level debug
