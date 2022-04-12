@@ -49,7 +49,7 @@ class SignUpView(CreateView):
     success_url = '/'
     
 class LogoutInterfaceView(LoginRequiredMixin, LogoutView):
-    login_url = '/login/'
+    login_url = '/login'
     template_name ='logout.html'
 
 class LoginInterfaceView(LoginView):
