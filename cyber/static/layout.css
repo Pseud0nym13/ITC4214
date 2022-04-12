@@ -16,6 +16,19 @@ footer{
    height:100px;   /* Height of the footer */
    background:transparent;
 }
+.flexbox-wrap{
+  flex-wrap: wrap;
+}
+.card{
+  height: 300px;
+  width: 300px;
+  margin-bottom:2%;
+}
+.card-body{
+  background-color: #5B42F3;
+  border: 6px solid rgb(0, 0, 0);
+
+}
 .container-fluid{
     display: flex;
     flex-wrap: inherit;
@@ -27,12 +40,8 @@ footer{
 .flexbox-container {
     display: flex;
     align-items: flex-start;
-    justify-content: flex-start;
+    justify-content:center;
   } 
-.flexbox-item {
-    display:flex;
-    list-style: none;
-  }
 .header-logo-imagee{
     width: 120px;
   }

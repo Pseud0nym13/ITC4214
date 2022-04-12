@@ -1,8 +1,10 @@
 from email.policy import default
 from tkinter import CASCADE
 from django.db import models
+from django.forms import IntegerField
 from django.utils import timezone
 from django.contrib.auth.models import AbstractUser
+from django.contrib.auth.models import User
 
 class User(AbstractUser):
     def get_absolute_url(self):
@@ -26,6 +28,5 @@ class Developer (models.Model):
     game = models.ManyToManyField(Games)
     description = models.TextField()
     date_joined = models.DateTimeField(default = timezone.now, blank = True)
-    # image = models.FileField(upload_to=filepath,)
 #Create your models here.
 

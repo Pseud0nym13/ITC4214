@@ -3,20 +3,18 @@
 {% block content %}
 <div class = "flexbox-container flexbox-wrap mt-4">
 {% for game in games %}
-<div class="card mx-4" style="width: 18rem;">
-    <img class="card-img-top" src="{{game.image}}" alt="Card image cap">
+<div class="card mx-4">
+    <img class="card-img-top" src="{{game.image}}" >
     <div class="card-body">
-        <h5 class="card-title">{{game.name}}</h5>
+        <h5 class="card-title">Title: {{game.name}}</h5>
         <p class="card-text">
         <ul>
-            <li>{{game.genre}}</li>
-            <li>{{game.description}}</li>
-            <li>{{game.date_posted}}</li>
-            <li>{{game.developer}}</li>
+            <li>Genre: {{game.genre}}</li>
+            <li>Description: {{game.description}}</li>
+            <li>Release date: {{game.date_posted}}</li>
 
         </ul>
         </p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
     </div>
 </div>
 {% endfor %}
