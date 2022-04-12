@@ -12,7 +12,10 @@
             <li>Genre: {{game.genre}}</li>
             <li>Description: {{game.description}}</li>
             <li>Release date: {{game.date_posted}}</li>
-
+            {% for developer in game.developer_set.all%}
+            <li>Developer: {{developer.name}}</li>
+            {%endfor%}
+                
         </ul>
         </p>
     </div>

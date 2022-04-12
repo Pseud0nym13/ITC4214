@@ -1,1 +1,1 @@
-web: gunicorn  cyber.wsgi:application --log-file - --log-level debug
+web: gunicorn  CyberSec.wsgi:application --log-file - --log-level debug
