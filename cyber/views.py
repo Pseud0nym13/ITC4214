@@ -11,7 +11,6 @@ from django.db.models import Q
 from django.contrib.auth.decorators import login_required
 @login_required(login_url='login')
 def update(request, sys_gen_user):
-
     # here I am getting the user name of current logged in user.
     if request.user.is_authenticated:
         username = request.user.username
@@ -43,7 +42,6 @@ class CustomUserCreationForm(UserCreationForm):
 
     class Meta(UserCreationForm.Meta):
         model = User
-    
 class SignUpView(CreateView):
     form_class = CustomUserCreationForm
     template_name = 'register.html'
