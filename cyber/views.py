@@ -26,8 +26,6 @@ from django.contrib.auth.mixins import UserPassesTestMixin
 #             if form.is_valid():
 #                 form.save()
 
-def profile(request):
-    return
 class Profile(LoginRequiredMixin,UserPassesTestMixin, UpdateView ):
     def test_func(self):
         return self.request.user.id == self.kwargs['pk']
@@ -43,7 +41,6 @@ class GameCreateView(LoginRequiredMixin, CreateView):
     template_name = 'addgame.html'
     success_url = 'games'
 class CustomUserCreationForm(UserCreationForm):
-
     class Meta(UserCreationForm.Meta):
         model = User
 class SignUpView(CreateView):
